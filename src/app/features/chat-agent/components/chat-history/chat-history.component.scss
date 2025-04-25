@@ -1,0 +1,57 @@
+/* chatbox.component.scss */
+.chatbox {
+  position: relative;
+//   max-width: 400px;
+  width: 100%;
+  height: 85vh;
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa); /* Purple gradient */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  /* Chat Messages Area */
+  .chat-messages {
+    height: calc(
+      100% - 60px
+    ); /* Ensure it takes full space except the input area */
+    overflow-y: auto;
+  }
+
+  /* Individual messages */
+  .message {
+    word-wrap: break-word;
+    // max-width: 80%;
+  }
+
+  .bg-primary {
+    background-color: #d433ff !important; /* Purple background for sent messages */
+  }
+
+  /* Chat Input Area */
+  .chat-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .form-control {
+    // border-radius: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .btn-purple {
+    background-color: #8e24aa;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-purple:hover {
+    background-color: #6a1b9a; /* Darker purple when hovered */
+  }
+
+  .btn-purple:focus {
+    outline: none;
+  }
+}

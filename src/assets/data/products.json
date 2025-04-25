@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Fresh Pear",
+      "price": 19.99,
+      "imageUrl": "assets/images/strawberries.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Avocado",
+      "price": 29.99,
+      "imageUrl": "assets/images/kiwi.png"
+    },
+    {
+      "id": 3,
+      "name": "Banana",
+      "price": 15.50,
+      "imageUrl": "assets/images/dragon-fruit.jpg"
+    }
+  ]
+  

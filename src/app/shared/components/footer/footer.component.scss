@@ -1,0 +1,52 @@
+.custom-footer {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // z-index: 10;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  // height: 125px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    // height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    animation: shine 6s infinite linear;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .footer-description {
+    font-size: 0.95rem;
+    color: #e1bee7;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    color: #f3e5f5;
+    margin: 0;
+  }
+}

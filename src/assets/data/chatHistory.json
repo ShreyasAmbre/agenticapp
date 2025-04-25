@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "dateTime": "2025-04-25T10:15:00Z",
+    "senderName": "John",
+    "message": "Hi there! How can I help you today?",
+    "isSender": false
+  },
+  {
+    "id": 1,
+    "dateTime": "2025-04-25T10:16:30Z",
+    "senderName": "You",
+    "message": "I want to know more about your fruit selection.",
+    "isSender": true
+  },
+  {
+    "id": 2,
+    "dateTime": "2025-04-25T10:17:10Z",
+    "senderName": "John",
+    "message": "Sure! We have a wide variety including apples, bananas, and pears.",
+    "isSender": false
+  },
+  {
+    "id": 3,
+    "dateTime": "2025-04-25T10:18:00Z",
+    "senderName": "You",
+    "message": "Great! Do you deliver same day?",
+    "isSender": true
+  },
+  {
+    "id": 4,
+    "dateTime": "2025-04-25T10:18:45Z",
+    "senderName": "John",
+    "message": "Yes, we offer same-day delivery in most areas!",
+    "isSender": false
+  }
+]

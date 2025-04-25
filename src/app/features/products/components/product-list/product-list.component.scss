@@ -1,0 +1,91 @@
+// Variables for colors
+$primary-color: #8e24aa; // Purple color for buttons and accents
+$card-bg-color: #fff; // White color for card background
+$hover-bg-color: #6a1b9a; // Darker purple for hover effects
+
+.product-list-container {
+  //   max-width: 1200px;
+  margin: 0 auto;
+  //   padding: 30px 15px;
+  //   background: linear-gradient(
+  //     135deg,
+  //     #6a1b9a,
+  //     $primary-color
+  //   ); // Purple gradient
+  //   border-radius: 10px;
+  display: flex;
+  
+  flex-wrap: wrap;
+  //   gap: 30px;
+}
+
+.product-card {
+  flex: 1 1 30%; // Ensures responsive layout within the container
+  display: flex;
+  justify-content: center;
+
+  .card {
+    background: $card-bg-color;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05); // Slight zoom effect on hover
+    }
+
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card-body {
+      text-align: center;
+
+      .product-image {
+        width: 100%; /* Ensures the image stretches to fill the width of the card */
+        height: 100%; /* Set a fixed height for all images */
+        object-fit: cover; /* Ensures the image covers the entire area while maintaining its aspect ratio */
+        border-radius: 8px; /* Optional: to give rounded corners to the image */
+      }
+
+      .product-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .product-price {
+        font-size: 16px;
+        color: $primary-color;
+        margin-top: 10px;
+      }
+
+      .add-to-cart {
+        background-color: $primary-color;
+        color: $card-bg-color;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+
+        &:hover {
+          background-color: $hover-bg-color;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styling
+@media (max-width: 768px) {
+  .product-name {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+}
