@@ -4,11 +4,10 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { Product } from '../../models/product.model';
 
 @Component({
-  selector: 'app-product-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss'
+    selector: 'app-product-list',
+    imports: [],
+    templateUrl: './product-list.component.html',
+    styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent implements OnInit {
   

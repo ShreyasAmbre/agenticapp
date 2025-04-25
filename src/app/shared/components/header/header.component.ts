@@ -4,14 +4,13 @@ import { ProductService } from '../../../features/products/services/product.serv
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    CommonModule
-  ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    imports: [
+        RouterOutlet,
+        CommonModule
+    ],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   #producService = inject(ProductService);

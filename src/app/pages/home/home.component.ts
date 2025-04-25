@@ -4,15 +4,14 @@ import { ChatHistoryComponent } from '../../features/chat-agent/components/chat-
 import { ProductListComponent } from '../../features/products/components/product-list/product-list.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    ProductChatLayoutComponent,
-    ProductListComponent,
-    ChatHistoryComponent,
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [
+        ProductChatLayoutComponent,
+        ProductListComponent,
+        ChatHistoryComponent,
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

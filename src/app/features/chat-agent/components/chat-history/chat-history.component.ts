@@ -4,11 +4,10 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-chat-history',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './chat-history.component.html',
-  styleUrl: './chat-history.component.scss'
+    selector: 'app-chat-history',
+    imports: [CommonModule],
+    templateUrl: './chat-history.component.html',
+    styleUrl: './chat-history.component.scss'
 })
 export class ChatHistoryComponent implements OnInit {
   
