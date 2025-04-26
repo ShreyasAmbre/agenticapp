@@ -22,8 +22,12 @@ export class ProductService {
     )
   }
 
+  getAllProducts(){
+    return this.productList()
+  }
+
   getNumberOfProducts(){
-    return this.productList().length
+    return this.productList()
   }
 
   getCart(): ProductCart{
