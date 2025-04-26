@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Important Guideline 
 1. Firebase Prject and APP Console Dashboard URL 
 => https://console.firebase.google.com/u/0/project/agentic-vertexai-app/genai/vertex
+2. Firebase Gemeni Vertex AI Agent Integration Docs
+=> https://firebase.google.com/docs/vertex-ai/get-started?platform=web&hl=en&authuser=0&_gl=1*t97x0q*_ga*MTMxNTc2MjA2NC4xNzQ1NTg2NzEw*_ga_CW55HF8NVT*MTc0NTY0NDk4NC4zLjEuMTc0NTY0NjM3OC4yMS4wLjA.#add-sdk
