@@ -3,10 +3,11 @@ import { ChatHistoryService } from '../../services/chat-history.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { AiService } from '../../../../core/services/ai.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-chat-history',
-    imports: [CommonModule],
+    imports: [CommonModule, FormsModule],
     standalone: true,
     templateUrl: './chat-history.component.html',
     styleUrl: './chat-history.component.scss'
@@ -14,7 +15,7 @@ import { AiService } from '../../../../core/services/ai.service';
 export class ChatHistoryComponent implements OnInit {
   
   #chatHistoryService = inject(ChatHistoryService);
-  #aiService = inject(AiService)
+  #aiService = inject(AiService);
 
   chatHistory = this.#chatHistoryService.chatHistoryData;
   promptMsg: string = ''
@@ -29,8 +30,36 @@ export class ChatHistoryComponent implements OnInit {
     });
   }
 
-  sendPrompt(){
-    this.#aiService.ask(this.promptMsg)
+  async sendPrompt(){
+    const question = this.promptMsg
+    if(!question){
+      return;
+    }
+
+    this.#chatHistoryService.chatHistoryData.update((value) => [
+      ...value,
+      {
+        id: 0,
+        dateTime: new Date().toISOString(),
+        senderName: "Customer",
+        message: question,
+        isSender: true,
+      }
+    ])
+
+    const response = await this.#aiService.ask(this.promptMsg);
+    console.log("RS=>", response)
+    this.promptMsg = ''
+    this.#chatHistoryService.chatHistoryData.update((value) => [
+      ...value,
+      {
+        id: 0,
+        dateTime: new Date().toISOString(),
+        senderName: "Fruity AI Agent",
+        message: response,
+        isSender: false,
+      }
+    ])
   }
 
 }

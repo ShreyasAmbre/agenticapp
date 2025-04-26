@@ -9,6 +9,16 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
+  .chat-header {
+    background: linear-gradient(135deg, #7b2ff7, #f107a3); 
+    border-top-left-radius: .5rem; 
+    border-top-right-radius: .5rem;
+
+    h5 {
+      font-weight: 600; letter-spacing: 0.5px;
+    }
+  }
+
   /* Chat Messages Area */
   .chat-messages {
     height: calc(

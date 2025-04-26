@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Important Guideline 
+1. Firebase Prject and APP Console Dashboard URL 
+=> https://console.firebase.google.com/u/0/project/agentic-vertexai-app/genai/vertex

@@ -7,12 +7,15 @@ import { ProductService } from '../../features/products/services/product.service
   providedIn: 'root'
 })
 export class AiService {
+  
+  #productService = inject(ProductService)
+  #firebaseApp = inject(FirebaseApp);
+
   private readonly model: GenerativeModel;
   private readonly chat: ChatSession;
-  #productService = inject(ProductService)
 
 
-  constructor(@Inject("FIREBASE_APP") private firebaseApp: FirebaseApp) { 
+  constructor() { 
     const productsToolSet: FunctionDeclarationsTool = {
       functionDeclarations: [
         {
@@ -25,7 +28,7 @@ export class AiService {
         }
       ]
     }
-    const vertexAI = getVertexAI(this.firebaseApp);
+    const vertexAI = getVertexAI(this.#firebaseApp);
     const systemInstruction = "Welcom to Fruit Store. you are superstar agent for this ecommerce store. you will assist users by answering question about the inventory and event being able to add items to the cart"
     this.model = getGenerativeModel(vertexAI, {
       model: 'gemini-2.0-flash',
@@ -74,5 +77,7 @@ export class AiService {
         
       }
     }
+    console.log("RESPONSE  =>", result)
+    return result.response.text();
   }
 }

@@ -9,6 +9,7 @@ import { ProductCart } from '../../../features/products/models/product.model';
     imports: [
         CommonModule
     ],
+    standalone: true,
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })

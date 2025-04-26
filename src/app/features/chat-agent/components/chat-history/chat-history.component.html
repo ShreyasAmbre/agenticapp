@@ -1,31 +1,39 @@
-<div class="chatbox card shadow-lg">
-    <!-- Chat Messages Area -->
-    <div class="chat-messages p-3 overflow-auto">
-        @for (chat of chatHistory(); track $index) {
-            @if (!chat.isSender) {
-            <div class="message p-2 mb-2 rounded-3 bg-light">
-                <div class="d-flex justify-content-between small text-muted mb-1">
-                    <strong>{{ chat.senderName }}</strong>
-                    <span>{{ chat.dateTime | date: 'short' }}</span>
-                </div>
-                <p class="mb-0">{{ chat.message }}</p>
-            </div>
-            } @else {
-            <div class="message p-2 mb-2 rounded-3 bg-primary text-white text-end ms-auto">
-                <div class="d-flex justify-content-between small text-white-50 mb-1">
-                    <strong class="text-white">{{ chat.senderName }}</strong>
-                    <span>{{ chat.dateTime | date: 'short' }}</span>
-                </div>
-                <p class="mb-0">{{ chat.message }}</p>
-            </div>
-            }
-        }
+<div class="chatbox card shadow-lg position-relative overflow-hidden">
+  
+    <div class="chat-header text-white p-3 text-center" >
+        <h5 class="m-0">  Hi, I'm <strong>Fruity 🍇</strong> — Your AI Agent!</h5>
     </div>
 
+  
+    <!-- Chat Messages Area -->
+    <div class="chat-messages p-3 overflow-auto" style="height: 400px;">
+      @for (chat of chatHistory(); track $index) {
+        @if (!chat.isSender) {
+          <div class="message p-2 mb-2 rounded-3 bg-light">
+            <div class="d-flex justify-content-between small text-muted mb-1">
+              <strong>{{ chat.senderName }}</strong>
+              <span>{{ chat.dateTime | date: 'short' }}</span>
+            </div>
+            <p class="mb-0">{{ chat.message }}</p>
+          </div>
+        } @else {
+          <div class="message p-2 mb-2 rounded-3 bg-primary text-white text-end ms-auto">
+            <div class="d-flex justify-content-between small text-white-50 mb-1">
+              <strong class="text-white">{{ chat.senderName }}</strong>
+              <span>{{ chat.dateTime | date: 'short' }}</span>
+            </div>
+            <p class="mb-0">{{ chat.message }}</p>
+          </div>
+        }
+      }
+    </div>
+  
     <!-- Chat Input Area -->
     <div class="chat-input d-flex align-items-center p-2 bg-dark text-white position-absolute bottom-0 w-100">
-        <input type="text" placeholder="Type your message..." class="form-control me-2" 
-        [value]="promptMsg"/>
-        <button class="btn btn-purple" (click)="sendPrompt()" >Send</button>
+      <input type="text" placeholder="Type your message..." class="form-control me-2" 
+      [(ngModel)]="promptMsg"/>
+      <button class="btn btn-purple" (click)="sendPrompt()">Send</button>
     </div>
-</div>
+  
+  </div>
+  

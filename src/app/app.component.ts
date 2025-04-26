@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./shared/components/header/header.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
@@ -10,8 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
         RouterOutlet,
         HeaderComponent,
         FooterComponent,
-        HttpClientModule
     ],
+    standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
