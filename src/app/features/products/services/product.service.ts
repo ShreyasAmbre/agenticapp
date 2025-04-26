@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
-import { Product } from '../models/product.model';
+import { Product, ProductCart } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,33 @@ export class ProductService {
 
   private productDataUrl = 'assets/data/products.json';
   productList = signal<Product[]>([])
-  cart = signal<number>(0)
+  productCart = signal<ProductCart>({
+    products: [],
+    totalPrice: 0
+  })
 
   getProducts(): Observable<Product[]>{
     return this.#http.get<Product[]>(this.productDataUrl).pipe(
       map((response:Product[]) => response)
     )
   }
+
+  getNumberOfProducts(){
+    return this.productList().length
+  }
+
+  getCart(): ProductCart{
+    return this.productCart()
+  }
+
+  addToCart(product: Product){
+    this.productCart.update(value => {
+      return {
+        products: [...value?.products, product],
+        totalPrice: value?.totalPrice + product.price
+      }
+    })
+  }
+  
 
 }

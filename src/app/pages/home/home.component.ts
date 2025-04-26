@@ -10,6 +10,7 @@ import { ProductListComponent } from '../../features/products/components/product
         ProductListComponent,
         ChatHistoryComponent,
     ],
+    standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

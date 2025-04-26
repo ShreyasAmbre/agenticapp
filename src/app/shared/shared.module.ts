@@ -12,7 +12,7 @@ import { ProductChatLayoutComponent } from './layouts/product-chat-layout/produc
     CommonModule,
     HeaderComponent,
     FooterComponent,
-    ProductChatLayoutComponent
+    ProductChatLayoutComponent,
   ]
 })
 export class SharedModule { }

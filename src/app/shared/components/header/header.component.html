@@ -19,7 +19,7 @@
             <div class="cart-summary d-flex align-items-center">
                 <i class="bi bi-cart-fill cart-icon"></i>
                 <span class="cart-title">Cart</span>
-                <span class="cart-price">₹ {{ cartPrice() | number: '1.0-2' }}</span>
+                <span class="cart-price">₹ {{ productCart().totalPrice | number: '1.0-2' }}</span>
             </div>
         </div>
     </div>

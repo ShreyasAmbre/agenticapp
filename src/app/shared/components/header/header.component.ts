@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductService } from '../../../features/products/services/product.service';
 import { CommonModule } from '@angular/common';
+import { ProductCart } from '../../../features/products/models/product.model';
 
 @Component({
     selector: 'app-header',
     imports: [
-        RouterOutlet,
         CommonModule
     ],
     templateUrl: './header.component.html',
@@ -15,6 +15,6 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   #producService = inject(ProductService);
 
-  cartPrice = this.#producService.cart
+  productCart = this.#producService.productCart
   
 }

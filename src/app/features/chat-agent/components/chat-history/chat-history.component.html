@@ -24,7 +24,8 @@
 
     <!-- Chat Input Area -->
     <div class="chat-input d-flex align-items-center p-2 bg-dark text-white position-absolute bottom-0 w-100">
-        <input type="text" placeholder="Type your message..." class="form-control me-2" />
-        <button class="btn btn-purple">Send</button>
+        <input type="text" placeholder="Type your message..." class="form-control me-2" 
+        [value]="promptMsg"/>
+        <button class="btn btn-purple" (click)="sendPrompt()" >Send</button>
     </div>
 </div>

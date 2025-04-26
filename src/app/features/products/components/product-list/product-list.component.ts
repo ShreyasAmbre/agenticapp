@@ -6,6 +6,7 @@ import { Product } from '../../models/product.model';
 @Component({
     selector: 'app-product-list',
     imports: [],
+    standalone: true,
     templateUrl: './product-list.component.html',
     styleUrl: './product-list.component.scss'
 })
@@ -25,8 +26,8 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  addToCart(product: Product){
-    this.#productService.cart.update(value => value + product.price)
+  addItemToCart(product: Product){
+    this.#productService.addToCart(product)
   }
 
 
