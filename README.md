@@ -1,31 +1,86 @@
-# AgenticApp
+# 🛒 Fruit Ecommerce AI Chatbot
+Welcome to the Fruit Ecommerce AI Chatbot project! 🍇🍉🍍
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+This project is a modern, intelligent chatbot system for a fruit-based ecommerce website. It enhances the shopping experience by helping customers explore products, answer their queries, and even add products directly to their cart — powered by Vertex AI through Firebase.
 
-## Development server
+### 🚀 Project Overview
+- AI Agent integrated with Vertex AI (Gemini 2.0 Flash model) to simulate a friendly shopping assistant.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Real-time chat system where users can send prompts and receive intelligent replies.
+- Tools integration allowing the AI to:
 
-## Code scaffolding
+- Fetch product details.
+- Get inventory statistics.
+- Add products directly into the shopping cart.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Responsive, Premium UI using gradient purple themes for a luxurious, ecommerce-focused design.
 
-## Build
+- Standalone Angular Component Architecture for highly maintainable and modular code.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Signal-based State Management in Angular for chat history and product data handling.
 
-## Running unit tests
+- Firebase App and Vertex AI SDK for seamless AI communication.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 📂 Features
+- Interactive AI Chat
 
-## Running end-to-end tests
+- Welcoming header: "Hi, I am your Fruit Store Assistant!"
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Natural conversation experience.
 
-## Further help
+- Product Inventory Handling
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- List available fruits.
 
+- Show product counts.
+
+- Add selected fruits to the shopping cart.
+
+- Cart Management
+
+- View added items.
+
+- Dynamic total price updates.
+
+- Modern UI/UX
+
+- Gradient-themed chatbot design.
+
+- Responsive input and message layouts.
+
+### Firebase Integration
+
+1. Vertex AI API integration for intelligent agent responses.
+
+2. 🛠️ Tech Stack
+Angular 18+ (with standalone components)
+
+3. Firebase (Vertex AI integration)
+
+4. Vertex AI SDK (Generative Model + Tools API)
+
+5. RxJS Signals (for reactive state management)
+
+6. Bootstrap 5 (for responsive design)
+
+7. TypeScript (strong typing and clean structure)
+
+### 📖 How It Works
+#### User Interaction:
+- A user types a message/question in the chatbox.
+
+#### AI Handling:
+- The prompt is sent to Vertex AI (Gemini model).
+If the AI model detects a tool-based task (like getting products or adding to cart), it triggers a function call.
+
+#### Tool Execution:
+- The application captures the function call:
+
+- Fetches product information.
+
+- Adds selected product to the shopping cart.
+
+- Replies back with a success message.
 
 ## Important Guideline 
 1. Firebase Prject and APP Console Dashboard URL 
