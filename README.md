@@ -93,3 +93,8 @@ If the AI model detects a tool-based task (like getting products or adding to ca
 => List down all products
 => Add all the items less then 20 rupees
 => Get products from cart
+
+### Future Modules API Integration
+1. Login
+2. Get All Products 
+3. Filter Products
